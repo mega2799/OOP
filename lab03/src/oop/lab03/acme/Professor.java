@@ -1,10 +1,10 @@
 package oop.lab03.acme;
 
 public class Professor implements User {
-	private int id;
-	private String name;
-	private String surname;
-	private String password;
+	private final int id;
+	private final String name;
+	private final String surname;
+	private final String password;
 	private String[] courses;
 
 
@@ -16,18 +16,29 @@ public class Professor implements User {
 		this.password = password;
 		this.courses = courses;
 	}
+	
+	
+	
+	public int getId() {
+		return this.id;
+	}
 
-	@Override
+	public String getSurname() {
+		return this.surname;
+	}
+
+	public String[] getCourses() {
+		return this.courses;
+	}
+
 	public String getUsername() {
 		return this.name;
 	}
 
-	@Override
 	public String getPassword() {
 		return this.password;
 	}
 
-	@Override
 	public String getDescription() {
 		return this.toString();
 	}

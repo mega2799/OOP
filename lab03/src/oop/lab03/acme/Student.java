@@ -16,6 +16,7 @@ public class Student implements User {
         this.matriculationYear = matriculationYear;
         this.password = password;
     }
+    
 
     public String getName() {
         return this.name;
