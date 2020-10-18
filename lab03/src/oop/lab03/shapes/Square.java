@@ -2,6 +2,8 @@ package oop.lab03.shapes;
 
 public class Square implements Poligon {
 	
+	static final int N_EDGES = 4;
+
 	private final double edge;
 	
 	public Square(double edge) {
@@ -9,7 +11,7 @@ public class Square implements Poligon {
 	}
 	
 	public double getPerimeter() {
-		return edge * 4;
+		return edge * N_EDGES;
 	}
 
 	public double getSquare() {
@@ -17,7 +19,7 @@ public class Square implements Poligon {
 	}
 	
 	public int getEdgesCount() {
-		return 4;
+		return N_EDGES;
 	}
 
 }

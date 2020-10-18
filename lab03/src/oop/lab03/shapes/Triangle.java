@@ -2,6 +2,7 @@ package oop.lab03.shapes;
 
 public class Triangle implements Poligon {
 	
+	static final int N_EDGES = 3;
 	private final double edge1;
 	private final double edge2;
 	private final double hypothenuse;
@@ -24,7 +25,7 @@ public class Triangle implements Poligon {
 	}
 
 	public int getEdgesCount() {
-		return 3;
+		return N_EDGES;
 	}
 
 }

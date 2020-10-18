@@ -1,6 +1,9 @@
 package oop.lab03.shapes;
 
 public class Rectangle implements Poligon {
+	
+	static final int N_EDGES = 4;
+
 	private final double base;
 	private final double height;
 	
@@ -20,7 +23,7 @@ public class Rectangle implements Poligon {
 	}
 
 	public int getEdgesCount() {
-		return 4;
+		return N_EDGES;
 	}
 
 }
