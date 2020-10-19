@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+/home/mega/Scuola/OOP/CartellaACazzo/.metadata/.plugins/org.eclipse.jdt.core
+4010541665.index
