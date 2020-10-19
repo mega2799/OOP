@@ -16,8 +16,37 @@ public final class TestBankAccount {
 
         final BankAccount acc1 = new SimpleBankAccount(usr1.getUserID(), 0);
 
+        /*
+         
         // TODO Change the implementation from StrictBankAccount to ExtendedStrictBankAccount
         final BankAccount acc2 = new StrictBankAccount(usr2.getUserID(), 0);
+
+        acc1.deposit(usr1.getUserID(), DEPOSIT);
+        acc2.deposit(usr2.getUserID(), DEPOSIT);
+        acc1.withdraw(usr1.getUserID(), WITHDRAW);
+        acc2.withdraw(usr2.getUserID(), WITHDRAW);
+
+        System.out.println("Mario Rossi account balance is " + acc1.getBalance());
+        System.out.println("Luigi Bianchi account balance is " + acc2.getBalance());
+
+        acc1.deposit(usr1.getUserID(), DEPOSIT);
+        acc2.deposit(usr2.getUserID(), DEPOSIT);
+        acc1.computeManagementFees(usr1.getUserID());
+        acc2.computeManagementFees(usr2.getUserID());
+
+        System.out.println("Mario Rossi account balance is " + acc1.getBalance());
+        System.out.println("Luigi Bianchi account balance is " + acc2.getBalance());
+
+		@out 
+		Mario Rossi account balance is -5000.0
+		Luigi Bianchi account balance is 10000.0
+		Mario Rossi account balance is 4995.0
+		Luigi Bianchi account balance is 19994.8
+
+         */
+                
+        // TODO Change the implementation from StrictBankAccount to ExtendedStrictBankAccount
+        final BankAccount acc2 = new ExtendedStrictBankAccount(usr2.getUserID(), 0);
 
         acc1.deposit(usr1.getUserID(), DEPOSIT);
         acc2.deposit(usr2.getUserID(), DEPOSIT);
