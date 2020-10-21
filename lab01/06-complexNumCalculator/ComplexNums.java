@@ -1,7 +1,7 @@
-class ComplexNum{
+class ComplexNums{
     double re;
     double im;
-       ComplexNum(double a, double b) {
+       ComplexNums(double a, double b) {
         this.re = a;
         this.im = b;
     }
