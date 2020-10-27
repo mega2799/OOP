@@ -18,14 +18,7 @@ public final class UseSet {
      *            ignored
      */
     
-    public static boolean isEven(TreeSet<String> tree) {		// TODO
-    	for (String str: tree) {
-    		if (str.endsWith("0")) {
-    			return false;
-    		}  
-    	}
-    	return true;
-    }
+
     public static void main(final String[] args) {
         /*
          * Considering the content of "UseCollection, write a program which, in
@@ -58,9 +51,12 @@ public final class UseSet {
 				t.remove(Integer.toString(i));
 			}
 		}
-		
+		System.out.printf("My toString after removing some items\n[");
 		for (Iterator<String> it = t.iterator(); it.hasNext();) {
-			System.out.println(it.next());
+			System.out.printf("%s ",it.next());
 		}
+		System.out.printf("]\n");
+		
+		System.out.println("Even numbers? " + (t.size() % 2 == 0));
 	}
 }
