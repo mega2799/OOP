@@ -1,6 +1,7 @@
 package it.unibo.oop.lab05.ex1;
 
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Example class using {@link Set}.
@@ -15,6 +16,15 @@ public final class UseSet {
      * @param args
      *            ignored
      */
+    
+    public static boolean isEven(TreeSet<String> tree) {		// TODO
+    	for (String str: tree) {
+    		if (str.endsWith("0")) {
+    			return false;
+    		}  
+    	}
+    	return true;
+    }
     public static void main(final String[] args) {
         /*
          * Considering the content of "UseCollection, write a program which, in
@@ -34,5 +44,26 @@ public final class UseSet {
          * 
          * 6) Verifies if all the numbers left in the set are even
          */
+    	TreeSet<String> t = new TreeSet<>();
+
+    	for(int i=1; i <= 20; i++) {
+    		t.add(Integer.toString(i));
+    	}
+    	
+		System.out.println(t.toString());
+		
+		for(int i=3; i <= 20 ; i+= 3) {
+			if (t.contains(Integer.toString(i))) {
+				t.remove(Integer.toString(i));
+			}
+		}
+		
+		for(String s: t) {
+			System.out.println(s);
+		}
+		
+		while(t.iterator().hasNext()) {
+			System.out.println(t.iterator());
+		}
     }
 }
