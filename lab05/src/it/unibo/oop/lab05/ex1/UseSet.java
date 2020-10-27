@@ -1,5 +1,6 @@
 package it.unibo.oop.lab05.ex1;
 
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -58,12 +59,8 @@ public final class UseSet {
 			}
 		}
 		
-		for(String s: t) {
-			System.out.println(s);
+		for (Iterator<String> it = t.iterator(); it.hasNext();) {
+			System.out.println(it.next());
 		}
-		
-		while(t.iterator().hasNext()) {
-			System.out.println(t.iterator());
-		}
-    }
+	}
 }
