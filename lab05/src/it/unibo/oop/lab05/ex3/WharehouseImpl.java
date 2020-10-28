@@ -1,37 +1,43 @@
 package it.unibo.oop.lab05.ex3;
 
 import java.util.Set;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 
 public class WharehouseImpl implements Warehouse {
 	
-	private Set<String> prodSet = new LinkedHashSet<String>(); //se facessi Set<String,Porduct> ???? 
+	private Set<Product> prodSet = new LinkedHashSet<>();
 	
 	public void addProduct(Product p) {
+		this.prodSet.add(p);
 	}
 
-	
 	public Set<String> allNames() {
-		
-		return null;
+		final Set<String> outSet = new LinkedHashSet<>();
+		for (final var iterator : this.prodSet) {
+			outSet.add(iterator.getName());
+		}
+		return outSet;
 	}
 
-	@Override
 	public Set<Product> allProducts() {
-		// TODO Auto-generated method stub
-		return null;
+		final Set<Product> outSet = new LinkedHashSet<>();
+		for (final var iterator : this.prodSet) {
+			outSet.add(iterator);
+		}
+		return outSet;
 	}
 
-	@Override
 	public boolean containsProduct(Product p) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.prodSet.contains(p);
 	}
 
-	@Override
 	public double getQuantity(String name) {
-		// TODO Auto-generated method stub
-		return 0;
+		for (final var iterator : this.prodSet) {
+			if (iterator.getName().equals(name)) {
+				return iterator.getQuantity();
+			}
+		}
+		return -1;
 	}
-
 }

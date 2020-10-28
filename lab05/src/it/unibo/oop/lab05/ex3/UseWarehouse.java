@@ -27,17 +27,19 @@ public final class UseWarehouse {
          * them to run the test.
          */
 
-        final Product p1 = null;
-        final Product p2 = null;
-        final Product p3 = null;
+        final Product p1 = new ProductImpl("Scopettone",100);
+        final Product p2 = new ProductImpl("Ragù",10000);
+        final Product p3 = new ProductImpl("Pasta",69);
 
-        final Warehouse w = null;
+        final Warehouse w = new WharehouseImpl();
         w.addProduct(p3);
         w.addProduct(p1);
         w.addProduct(p2);
 
         System.out.println(w.allNames());
         System.out.println(w.allProducts());
+        
+        System.out.println(w.getQuantity("Pasta"));
 
     }
 
