@@ -8,14 +8,9 @@ public class ComparableProduct extends ProductImpl implements Comparable<Product
 	public ComparableProduct(String name, double quantity) {
 		super(name, quantity);
 	}
-	/*
+	
 	public int compareTo(Product arg0) {
 		return getName().compareTo(arg0.getName());
 	}
-*/	
 	
-	public int compareTo(final Product arg0) {
-		return - arg0.getName().compareTo(this.getName());
-	}
-
 }
